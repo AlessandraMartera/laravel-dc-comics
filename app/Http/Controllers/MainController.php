@@ -19,6 +19,26 @@ class MainController extends Controller
 
         $comic = Comic :: findOrFail($id);
 
-        return view('show');
+        return view('show',compact('comic'));
+    }
+
+    public function create(){
+        return view('create');
+    }
+
+    public function store(Request $request){
+        $comics = $request -> all();
+        $comic = Comic::create([
+            "title" => $comics["title"],
+            "description" => $comics["description"],
+            "thumb" => $comics["thumb"],
+            "price" => $comics["price"],
+            "series" => $comics["series"],
+            "sale_date" => $comics["sale_date"],
+            "type" => $comics["type"],
+
+        ]);
+        // return view('store');
+        return redirect()-> route('home');
     }
 }
