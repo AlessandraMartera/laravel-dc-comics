@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController as MainController;
 
 Route::get('/', [MainController::class, 'index']) -> name('home');
+
+// Route::get('/show/{id}', [MainController::class, 'show']) -> name('show');

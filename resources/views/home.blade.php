@@ -1,5 +1,9 @@
 @extends('layouts.layout-main')
 
 @section('content')
-    <h1>hello</h1>
+    <ul>
+        @foreach ($comics as $comic)
+            <li>{{ $comic['title'] }}</li>
+        @endforeach
+    </ul>
 @endsection
