@@ -41,6 +41,6 @@
             <input type="text" name="type" id="type" value="{{ $comic->type }}">
         </div>
 
-        <input type="submit" value="Aggiungi">
+        <input type="submit" value="Aggiorna">
     </form>
 @endsection
