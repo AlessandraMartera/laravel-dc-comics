@@ -8,20 +8,19 @@ use App\Models\Comic;
 
 class MainController extends Controller
 {
+    // function index
     public function index(){
-
         $comics = Comic :: all();
-
         return view('home', compact('comics'));
     }
 
+    // function show
     public function show($id){
-
         $comic = Comic :: findOrFail($id);
-
         return view('show',compact('comic'));
     }
 
+    // function create and store
     public function create(){
         return view('create');
     }
@@ -42,6 +41,7 @@ class MainController extends Controller
         return redirect()-> route('home');
     }
 
+    // function edit and update
     public function edit($id) {
 
         $comic = Comic :: findOrFail($id);
@@ -60,6 +60,7 @@ class MainController extends Controller
         return redirect() -> route('show', $comic -> id);
     }
 
+    // function delete
     public function delete($id) {
 
         $comic = Comic :: findOrFail($id);

@@ -4,13 +4,6 @@
     <form class="text-center" method="POST" action="{{ route('store') }}">
         @csrf
 
-        {{-- "title",
-    "description",
-    "thumb",
-    "price",
-    "series",
-    "sale_date",
-    "type", --}}
         <div class="my-3">
             <label for="title">Titolo</label>
             <input type="text" name="title">
