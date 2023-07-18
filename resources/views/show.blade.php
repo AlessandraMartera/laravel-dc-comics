@@ -36,7 +36,8 @@
         <div class="row">
             <a href="{{ route('edit', $comic->id) }}">edit</a>
 
-            <a href="">delete</a>
+
+            <a href="{{ route('delete', $comic->id) }}">delete</a>
         </div>
 
     </div>
