@@ -36,8 +36,13 @@
         <div class="row">
             <a href="{{ route('edit', $comic->id) }}">edit</a>
 
+            {{-- <a href="{{ route('delete', $comic->id) }}">delete</a> --}}
+            <form method="POST" action="{{ route('delete', $comic->id) }}">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="delete">
+            </form>
 
-            <a href="{{ route('delete', $comic->id) }}">delete</a>
         </div>
 
     </div>
