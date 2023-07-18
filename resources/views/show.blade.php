@@ -33,6 +33,11 @@
                 {{ $comic['type'] }}
             </span>
         </div>
+        <div class="row">
+            <a href="{{ route('edit', $comic->id) }}">edit</a>
+
+            <a href="">delete</a>
+        </div>
 
     </div>
 @endsection
