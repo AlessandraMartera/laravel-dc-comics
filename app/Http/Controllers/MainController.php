@@ -55,7 +55,10 @@ class MainController extends Controller
 
     public function update(Request $request, $id) {
 
-        $data = $request -> all();
+        $data = $request -> validate(
+            $this -> validationRules(),
+            $this -> validationErrors()
+        );;
 
         $comic = Comic :: findOrFail($id);
 
