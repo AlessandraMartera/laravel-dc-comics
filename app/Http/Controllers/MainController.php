@@ -79,7 +79,7 @@ class MainController extends Controller
 
     private function validationRules(){
         return [
-            "title" => 'required|max:32',
+            "title" => 'required|max:50',
             "description" => 'required',
             "thumb" => 'required',
             "price" => 'required',

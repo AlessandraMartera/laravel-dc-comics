@@ -7,7 +7,13 @@
         <div class="my-3">
             <label for="title">Titolo</label>
             <input type="text" name="title">
+
+            @error('title')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
+
+
 
         <div class="my-3">
             <label for="description">Descrizione</label>
