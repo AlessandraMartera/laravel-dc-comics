@@ -46,7 +46,7 @@
 
             <div>
                 {{-- <a href="{{ route('delete', $comic->id) }}">delete</a> --}}
-                <form method="POST" action="{{ route('delete', $comic->id) }}">
+                <form method="POST" action="{{ route('delete', $comic->id) }}" {{-- fare la conferma della rumozione --}} {{-- onsubmit="confirm(do you want delete)" --}}>
                     @csrf
                     @method('DELETE')
                     <input class="btn btn-light" type="submit" value="delete">

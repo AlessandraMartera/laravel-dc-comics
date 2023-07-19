@@ -19,7 +19,6 @@
             <input type="text" name="thumb">
         </div>
 
-
         <div class="my-3">
             <label for="price">Prezzo</label>
             <input type="text" name="price">

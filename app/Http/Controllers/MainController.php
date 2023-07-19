@@ -26,7 +26,16 @@ class MainController extends Controller
     }
 
     public function store(Request $request){
-        $comics = $request -> all();
+        $comics = $request -> validate([
+            "title" => 'required|max:32',
+            "description" => 'required|',
+            "thumb" => 'required|',
+            "price" => 'required|',
+            "series" => 'required|',
+            "sale_date" => 'required|date',
+            "type" => 'required|'
+        ]);
+
         $comic = Comic::create([
             "title" => $comics["title"],
             "description" => $comics["description"],
